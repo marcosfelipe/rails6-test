@@ -2,27 +2,12 @@
 
 <h1>High Scores</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Game</th>
-      <th>Score</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= react_component 'SimpleTable', data: @high_scores.to_json %>
 
-  <tbody>
-    <% @high_scores.each do |high_score| %>
-      <tr>
-        <td><%= high_score.game %></td>
-        <td><%= high_score.score %></td>
-        <td><%= link_to 'Show', high_score %></td>
-        <td><%= link_to 'Edit', edit_high_score_path(high_score) %></td>
-        <td><%= link_to 'Destroy', high_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<!--# TODO: add to SimpleTable-->
+<!--<td><%#= link_to 'Show', high_score %></td>-->
+<!--<td><%#= link_to 'Edit', edit_high_score_path(high_score) %></td>-->
+<!--<td><%#= link_to 'Destroy', high_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
 
 <br>
 
