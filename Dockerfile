@@ -19,8 +19,8 @@ RUN npm -v
 # the RubyGems. This is a separate step so the dependencies
 # will be cached unless changes to one of those two files
 # are made.
-#COPY Gemfile Gemfile.lock package.json yarn.lock ./
-COPY . ./
+COPY Gemfile Gemfile.lock package.json yarn.lock ./
+#COPY . ./
 #RUN gem install bundler -v 1.17.2
 RUN gem install bundler
 RUN gem install foreman -v 0.85.0
@@ -30,7 +30,7 @@ RUN npm install -g yarn
 RUN yarn install --check-files
 
 # Copy the main application.
-#COPY . ./
+COPY . ./
 
 # Expose port 3000 to the Docker host, so we can access it
 # from the outside.
