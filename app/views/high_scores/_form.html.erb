@@ -1,27 +1,7 @@
-<%= form_with(model: high_score, local: true) do |form| %>
-  <% if high_score.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(high_score.errors.count, "error") %> prohibited this high_score from being saved:</h2>
+<%= form_with(model: high_score, local: true) do%>
 
-      <ul>
-        <% high_score.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= react_component 'TextInput', name: 'high_score[game]', label: :game, error: high_score.errors[:game].join(',') %>
+  <%= react_component 'TextInput', name: 'high_score[score]', type: :number, label: :score, error: high_score.errors[:score].join('.') %>
 
-  <div class="field">
-    <%= form.label :game %>
-    <%= form.text_field :game %>
-  </div>
-
-  <div class="field">
-    <%= form.label :score %>
-    <%= form.number_field :score %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= react_component 'SubmitInput', name: :submit, id: :submit %>
 <% end %>
