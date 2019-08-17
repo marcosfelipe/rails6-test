@@ -5,25 +5,25 @@ Application Example with Rails 6 + Webpack + ReacJs + Material UI
 Things you may want to cover:
 
 * Ruby version
-- 2.6.2
+2.6.2
 
 * System dependencies
-- docker
+docker
 
 * Configuration
-- docker-compose up
+docker-compose up
 
 * Database creation
-- none
+none
 
 * Database initialization
-- none
+none
 
 * How to run the test suite
-- rake test
+rake test
 
 * Services (job queues, cache servers, search engines, etc.)
-- none
+none
 
 * Deployment instructions
-- none
+none
