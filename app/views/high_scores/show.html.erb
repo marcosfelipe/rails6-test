@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<%= react_component 'FlashMessage', text: flash[:notice] if flash[:notice] %>
 
 <p>
   <strong>Game:</strong>
