@@ -4,11 +4,9 @@
 
 <%= react_component 'SimpleTable', data: @high_scores.to_json %>
 
+<%= react_component 'FloatingAddButton', url: new_high_score_path %>
+
 <!--# TODO: add to SimpleTable-->
 <!--<td><%#= link_to 'Show', high_score %></td>-->
 <!--<td><%#= link_to 'Edit', edit_high_score_path(high_score) %></td>-->
 <!--<td><%#= link_to 'Destroy', high_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-
-<br>
-
-<%= link_to 'New High Score', new_high_score_path %>
