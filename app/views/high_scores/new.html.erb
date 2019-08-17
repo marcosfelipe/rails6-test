@@ -1,5 +1,7 @@
 <h1>New High Score</h1>
 
+<%= react_component 'FlashMessage', text: flash[:notice] if flash[:notice].present? %>
+
 <%= render 'form', high_score: @high_score %>
 
 <%= link_to 'Back', high_scores_path %>

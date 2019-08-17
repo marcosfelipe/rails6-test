@@ -31,7 +31,10 @@ class HighScoresController < ApplicationController
         format.html { redirect_to @high_score, notice: 'High score was successfully created.' }
         format.json { render :show, status: :created, location: @high_score }
       else
-        format.html { render :new }
+        format.html do
+          flash.now[:notice] = 'Validation failed!'
+          render :new
+        end
         format.json { render json: @high_score.errors, status: :unprocessable_entity }
       end
     end
